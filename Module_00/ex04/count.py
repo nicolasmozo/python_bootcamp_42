@@ -28,3 +28,9 @@ def text_analyzer(word=None):
         if i == " ":
             spaces += 1
     print("- ", spaces, " space(s)")
+
+x = sys.argv
+if len(x) > 2:
+    print("AssertionError: More than one argument")
+elif len(x) == 2:
+    text_analyzer(x[1])
