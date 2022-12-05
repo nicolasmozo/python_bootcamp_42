@@ -1,3 +1,3 @@
-# Python Bootcamp at 42
+# Python & AI / ML Bootcamp at 42
 
-Bootcamp in Pyhton from 42 School
+Bootcamp in Pyhton and AI / ML from 42 School
