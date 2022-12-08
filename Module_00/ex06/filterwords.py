@@ -5,14 +5,19 @@ x = sys.argv
 s = sys.argv[1]
 n = sys.argv[2]
 
+
 words = s.split(" ")
 
-filterwords = []
 for word in words:
     for c in word:
+        print(c)
         counter = sum(1 for char in word if char.isalpha())
-        if(counter > int(n)):
-            filterwords.append(word)
+
+
+
+# filterwords = []
+#         if(counter > int(n)):
+#             filterwords.append(word)
 
 print(filterwords)
 
