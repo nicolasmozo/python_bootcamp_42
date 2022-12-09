@@ -20,3 +20,4 @@ class ImageProcessor:
     def display(array):
         plt.imshow(array)
         return plt.show()
+
