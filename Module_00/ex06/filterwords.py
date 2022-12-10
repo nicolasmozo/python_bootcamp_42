@@ -1,36 +1,14 @@
 import sys
-import string
+import re
 
-x = sys.argv
-s = sys.argv[1]
-n = sys.argv[2]
+if len(sys.argv) != 3:
+    print("ERROR")
+    exit()
 
-
-words = s.split(" ")
-
+words = sys.argv[1].split(" ")
+temp = []
 for word in words:
-    for c in word:
-        print(c)
-        counter = sum(1 for char in word if char.isalpha())
-
-
-
-# filterwords = []
-#         if(counter > int(n)):
-#             filterwords.append(word)
-
-print(filterwords)
-
-
-# temp = []
-# for i,value in enumerate(s):
-#     for j in string.punctuation:
-#         if value != j:
-#             if j == " ":
-                
-#     print(i,value)
-#counter = 0
-
-# for i in s:
-#         if i != j:
-#             counter += 1
+    new_str = re.sub(r'[\W_]', '', word)
+    if (len(new_str)) > int(sys.argv[2]):
+        temp.append(new_str)
+print(temp)
