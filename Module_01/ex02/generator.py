@@ -1,4 +1,3 @@
-import sys
 import random
 import numpy as N
 
@@ -33,5 +32,3 @@ def generator(text, sep=" ", option=None):
     else:
         print("ERROR")
         return
-
-# generator(text, sep=" ",option='.')

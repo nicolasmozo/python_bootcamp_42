@@ -36,10 +36,3 @@ class Recipe:
     def __str__(self):
         '''Return the string to print with the recipe info'''
         return f" Recipe {self.name} has a cooking lvl of {self.cooking_lvl}. Cooking time is {self.cooking_time} and its ingredients are {self.ingredients}. Description (if any): {self.description}. Type of recipe: {self.recipe_type}"
-
-# ingredients = ["banada","1"]
-# tarta = Recipe("tarte",5,3,ingredients,None,'starter')
-
-# to_print = str(tarta)
-
-# print(to_print)

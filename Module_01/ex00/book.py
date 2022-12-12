@@ -52,23 +52,3 @@ class Book:
         else:
             print("Error: Recipe attribute is not a dictionary")
             exit()
-
-# mydic = {
-#     'starter': {
-#         'salad': {
-#         }
-#     },
-#     'lunch' : {
-#         'chicken': {
-
-#         }
-#     },
-#     'dessert' : {
-#         'chocalate': {
-
-#         }
-#     }
-# }
-# book1 = Book('hola',mydic)
-# #print(book1.recipes_list)
-# book1.get_recipe_by_name('hola')

@@ -16,8 +16,3 @@ class Stark(GotCharacter):
 
     def die(self):
         self.is_alive = False
-
-# hey = Stark()
-# print(hey.is_alive)
-# hey.die()
-# print(hey.is_alive)
