@@ -1,9 +1,7 @@
-import numpy as np
 import math
 
 
 class TinyStatistician:
-
     @staticmethod
     def mean(x):
         if not isinstance(x, list) or len(x) == 0:
@@ -44,6 +42,8 @@ class TinyStatistician:
         var = 0
         for i in x:
             var += (i-mean)**2
+        # sample variance inclues a -1 in below formula. When population, removes the -1. Eg ex05,module_02
+        # applies the same for standard deviation but using this variance fx, works
         return var/(len(x)-1)
 
     @classmethod
