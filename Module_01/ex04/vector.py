@@ -3,25 +3,24 @@ import numpy as np
 
 class Vector():
 
-    def __new__(cls,values):
-        if isinstance(values,int):
-            ls = []
-            for i in range(values):
-                ls.append([i])
-            return Vector(ls)
-        elif isinstance(values, tuple):
-            ls = []
-            for i in range(values[0],values[1]):
-                ls.append([i])
-            return Vector(ls)
-        else:
-            cls.__init__(cls,values)
+    # def __new__(cls,values):
+    #     if isinstance(values,int):
+    #         ls = []
+    #         for i in range(values):
+    #             ls.append([i])
+    #         return Vector(ls)
+    #     elif isinstance(values, tuple):
+    #         ls = []
+    #         for i in range(values[0],values[1]):
+    #             ls.append([i])
+    #         return Vector(ls)
+    #     else:
+    #         cls.__init__(cls,values)
     #deleteing above part new will make it wokr but without tuples or integers when passing. check tht, new its supposed to check frist an dthen call init with the rigt format, couldnt figure it out yet. to be continued
 
     def __init__(self, values):
-        print(values)
         self.values = values
-        size = len(self.values)
+        size = len(values)
         if size > 1:
             self.shape = (size,1)
         elif size == 1:
@@ -163,14 +162,13 @@ class Vector():
 
     __rmul__ = __mul__
 
-
-# v1 = Vector([[0.0, 1.0, 2.0, 3.0]])
-# v2 = Vector([[0.0, 2.0, 3.0, 4.0]])
-
+v1 = Vector([[0.0, 1.0, 2.0, 3.0]])
+#v2 = Vector([[0.0, 2.0, 3.0, 4.0]])
+print(v1 * 3)
 #v2 = Vector([[0.0], [1.0], [2.0], [3.0]])
 #print(v1*100)
-a  = Vector((10,16))
-a
+#a  = Vector(v1)
+
 # class Vector2():
 #     def __init__(self, values):
 #         self.values = values
