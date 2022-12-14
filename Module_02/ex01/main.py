@@ -14,14 +14,6 @@ def what_are_the_vars(*args, **kwargs):
         setattr(ObjectC, j, k)
     return ObjectC(None)  # ,ObjectC(kwargs)
 
-    # return ObjectC(j)
-    # for i in args:
-    #     setattr(ObjectC,'var',i)
-    #     return ObjectC(i)
-    # for key , value in kwargs.items():
-    #     #setattr(ObjectC,key,value)
-    #     return ObjectC(key)
-
 
 class ObjectC(object):
     def __init__(self, object):
@@ -53,5 +45,6 @@ obj = what_are_the_vars(12, "Yes", [0, 0, 0], a=10, hello="world")
 doom_printer(obj)
 obj = what_are_the_vars(42, a=10, var_0="world")
 doom_printer(obj)
+# not working
 obj = what_are_the_vars(42, "Yes", a=10, var_2="world")
 doom_printer(obj)
