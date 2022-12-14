@@ -47,13 +47,3 @@ class TinyStatistician:
         if len(x) == 0:
             return None
         return cls.var(x)**0.5
-
-
-
-#import numpy as np
-# tstat = TinyStatistician()
-# a = [1, 42, 300, 10, 59]
-# #a = [6,9,14,10,5,8,11]
-
-# print(np.sqrt(tstat.var(a)))
-# print(tstat.std(a))
