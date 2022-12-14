@@ -32,24 +32,24 @@ class Bank(object):
             @return   True if success, False if an error occured
         """
         if not isinstance(new_account, Account):
-            return '1'#False
+            return '1'  # False
         if len(dir(new_account)) - 1 % 2 == 0:
-            return '2'#False
+            return '2'  # False
         if not new_account.name or not new_account.id or not new_account.value:
-            return '3'#False
-        if not isinstance(new_account.id,int) or not isinstance(new_account.value,int) and not isinstance(new_account.value,float):
-            return '4'#False
+            return '3'  # False
+        if not isinstance(new_account.id, int) or not isinstance(new_account.value, int) and not isinstance(new_account.value, float):
+            return '4'  # False
         z = False
         a = False
         for i in dir(new_account):
             if i.startswith('b'):
-                return '5'#False
+                return '5'  # False
             if i.startswith('zip'):
                 z = True
             if i.startswith('addr'):
                 a = True
         if z == False or a == False:
-            return '6'#False
+            return '6'  # False
         for i in self.accounts:
             if i.name == new_account.name:
                 return False
@@ -63,9 +63,9 @@ class Bank(object):
             @amount:  float(amount) amount to transfer
             @return   True if success, False if an error occured
         """
-        if not isinstance(origin,str) or not isinstance(dest,str):
+        if not isinstance(origin, str) or not isinstance(dest, str):
             return False
-        if not isinstance(amount,int) or not isinstance(amount,float):
+        if not isinstance(amount, int) or not isinstance(amount, float):
             return False
         if amount < 0:
             return False
@@ -79,27 +79,16 @@ class Bank(object):
         for i in self.accounts:
             for j in self.accounts:
                 if i.name == origin and j.name == dest:
-                    #credit
+                    # credit
                     Account(origin).transfer(amount)
-                    #debit
+                    # debit
                     Account(dest).value -= amount
         return True
 
+    #not implemented
     def fix_account(self, name):
         """ fix account associated to name if corrupted
             @name:   str(name) of the account
             @return  True if success, False if an error occured
         """
-    
-
-
-# a1 = Account('uno')
-# Bank.add(self=Bank(), new_account=Account('uno',value=0))
-# print(Bank.transfer(self=Bank(),origin='c',dest='d',amount=0))
-bank = Bank()
-print(bank.add(Account(
-        'Smith Jane',
-        zip='911-745',
-        value=1000.0,
-        ref='1044618427ff2782f0bbece0abd05f31'
-    )))
+        pass
